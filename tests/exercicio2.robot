@@ -23,7 +23,6 @@ Cenario: email nome_sobrenome_idade@robot.com
 
 Email "${PESSOA.nome}" "${PESSOA.sobrenome}" "${PESSOA.idade}" "@robot.com"
     
-    ${EMAIL}                  Catenate    SEPARATOR=_    ${PESSOA.nome}    ${PESSOA.sobrenome}    ${PESSOA.idade}
-    ${EMAIL}                  Evaluate    "${EMAIL}"+"@robot.com"
+    ${EMAIL}                  Catenate    SEPARATOR=_    ${PESSOA.nome}    ${PESSOA.sobrenome}    ${PESSOA.idade}@robot.com
     [Return]                 ${EMAIL}
     Log To Console           ${EMAIL} 

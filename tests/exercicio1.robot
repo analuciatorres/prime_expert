@@ -61,6 +61,42 @@ Cenario: Meu teste soma
     ${RESULTADO}    Somar dois números "55" "44"
     Log To Console    ${RESULTADO}
 
+Cenario: email nome_sobrenome_idade@robot.com
+    [Tags]    EMAIL
+    ${RESULTADO}    Email "${PESSOA.nome}" "${PESSOA.sobrenome}" "${PESSOA.idade}" "@robot.com"
+
+
+
+Cenario: Contar de 0 a 9
+    FOR    ${count}            IN RANGE    0    10
+        Log To Console        ${count}
+    END
+
+        
+Cenario: Contador
+    [Tags]        Contador
+    FOR    ${count}            IN RANGE    0    10
+        Log To Console      Estou no número ${count}
+    END
+Cenario: Países
+    [Tags]        PAISES
+    @{PAÍSES}        Create List    Brasil    Alemanha    Jamaica    Canadá    México
+    FOR    ${países}    IN    @{PAÍSES}
+        Log To Console    Estou no seguinte país ${países}
+    END
+    
+
+Cenario: Imprimir 5 e 8
+    [Tags]        Contador_2
+    FOR    ${numero}            IN RANGE    0    10
+        IF            '${numero}'=='5'
+            Log To Console      Estou no número ${numero}
+        ELSE IF        '${numero}'=='8'
+            Log To Console      Estou no número ${numero}
+        END
+    END
+
+
 
 *** Keywords ***
 Somar dois números
@@ -74,3 +110,32 @@ Somar dois números "${NUM_A}" "${NUm_B}"
     [Return]                 ${SOMA}
     Log To Console           ${SOMA}  
 
+Email "${PESSOA.nome}" "${PESSOA.sobrenome}" "${PESSOA.idade}" "@robot.com"
+    
+    ${EMAIL}                  Catenate    SEPARATOR=_    ${PESSOA.nome}    ${PESSOA.sobrenome}    ${PESSOA.idade}@robot.com
+    [Return]                 ${EMAIL}
+    Log To Console           ${EMAIL} 
+
+Contar de 0 a 9
+    FOR    ${count}            IN RANGE    0    10
+        Log To Console        ${count}
+    END
+
+Contardor 
+    FOR    ${count}            IN RANGE    0    10
+        Log To Console      Estou no número ${count}
+    END
+
+Imprimir a lista de países
+    @{PAÍSES}        Criate list    Brasil    Alemanha    Jamaica    Canadá    México
+    FOR    ${países}    IN    @{PAÍSES}
+        Log To Console    Estou no seguinte país ${países}
+    END
+
+Imprimir 5 e 8
+    FOR    ${numero}            IN RANGE    0    10
+        IF '${count}'=='5'
+        Log To Console      Estou no número ${count}
+        IF ELSE '${numero}'=='8'
+        Log To Console      Estou no número ${count}
+    END
