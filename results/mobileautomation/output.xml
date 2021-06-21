@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210620 22:43:12.649" rpa="false" schemaversion="2">
+<suite id="s1" name="Mobileautomation" source="C:\Proj_Automação\Prime_Expert\prime_expert\tests\mobileautomation.robot">
+<test id="s1-t1" name="Caso de Teste 01: Abrindo o youtube e pesquisar">
+<kw name="Abrir App" library="kws_mobileautomation" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=J5AXB603594995H</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210620 22:43:13.228" endtime="20210620 22:43:42.390"/>
+</kw>
+<status status="PASS" starttime="20210620 22:43:13.228" endtime="20210620 22:43:42.391"/>
+</kw>
+<kw name="Abrir App" library="kws_mobileautomation">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=J5AXB603594995H</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210620 22:43:42.392" endtime="20210620 22:44:16.546"/>
+</kw>
+<status status="PASS" starttime="20210620 22:43:42.391" endtime="20210620 22:44:16.547"/>
+</kw>
+<kw name="Pesquisa um vídeo do &quot;robot framework&quot;" library="kws_mobileautomation" sourcename="Pesquisa um vídeo do ${PESQUISAR}">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageView[@content-desc="Pesquisar"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210620 22:44:16.548" endtime="20210620 22:44:22.424"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.ImageView[@content-desc="Pesquisar"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210620 22:44:22.428" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="Pesquisar"]'.</msg>
+<status status="PASS" starttime="20210620 22:44:22.425" endtime="20210620 22:44:26.295"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=com.google.android.youtube:id/search_edit_text</arg>
+<arg>${PESQUISAR}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210620 22:44:26.298" level="INFO">Typing text '"robot framework"' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
+<status status="PASS" starttime="20210620 22:44:26.296" endtime="20210620 22:44:27.771"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.TextView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210620 22:44:27.771" endtime="20210620 22:44:29.104"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.TextView</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210620 22:44:29.107" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.TextView'.</msg>
+<status status="PASS" starttime="20210620 22:44:29.104" endtime="20210620 22:44:29.376"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20210620 22:44:29.376" endtime="20210620 22:44:29.778"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:44:30.866" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:44:29.779" endtime="20210620 22:44:30.866"/>
+</kw>
+<status status="PASS" starttime="20210620 22:44:16.547" endtime="20210620 22:44:30.867"/>
+</kw>
+<kw name="Verificar pesquisa" library="kws_mobileautomation">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>class=android.widget.ImageView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210620 22:44:30.869" endtime="20210620 22:44:31.060"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:44:31.751" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:44:31.060" endtime="20210620 22:44:31.751"/>
+</kw>
+<status status="PASS" starttime="20210620 22:44:30.868" endtime="20210620 22:44:31.751"/>
+</kw>
+<kw name="Fechar o aplicativo" library="kws_mobileautomation" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:44:33.104" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:44:31.753" endtime="20210620 22:44:33.104"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210620 22:44:33.105" endtime="20210620 22:44:33.634"/>
+</kw>
+<status status="PASS" starttime="20210620 22:44:31.752" endtime="20210620 22:44:33.634"/>
+</kw>
+<tag>PESQUISAR</tag>
+<status status="PASS" starttime="20210620 22:43:13.227" endtime="20210620 22:44:33.635"/>
+</test>
+<test id="s1-t2" name="Caso de Teste 02: Logar no YouTube">
+<kw name="Abrir App" library="kws_mobileautomation" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=J5AXB603594995H</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210620 22:44:33.637" endtime="20210620 22:45:02.468"/>
+</kw>
+<status status="PASS" starttime="20210620 22:44:33.637" endtime="20210620 22:45:02.468"/>
+</kw>
+<kw name="Abrir App" library="kws_mobileautomation">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=J5AXB603594995H</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210620 22:45:02.470" endtime="20210620 22:45:33.578"/>
+</kw>
+<status status="PASS" starttime="20210620 22:45:02.469" endtime="20210620 22:45:33.578"/>
+</kw>
+<kw name="Logar no aplicativo com a conta &quot;x&quot;" library="kws_mobileautomation" sourcename="Logar no aplicativo com a conta ${CONTA}">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=Conta</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210620 22:45:33.580" endtime="20210620 22:45:36.688"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=Conta</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210620 22:45:36.698" level="INFO">Clicking element 'accessibility_id=Conta'.</msg>
+<status status="PASS" starttime="20210620 22:45:36.689" endtime="20210620 22:45:37.556"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.TextView</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20210620 22:45:37.556" endtime="20210620 22:45:38.720"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>class=android.widget.TextView</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210620 22:45:38.724" level="INFO">Clicking element 'class=android.widget.TextView'.</msg>
+<status status="PASS" starttime="20210620 22:45:38.721" endtime="20210620 22:45:38.934"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>id=identifierId</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20210620 22:45:54.806" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="720" height="1280"&gt;
+  &lt;android.widget.FrameLayout index="0" package="com.google.android.youtube" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][720,1280]" displayed="true"&gt;
+    &lt;android.widget.FrameLayout index="0" package="com.google.android.youtube" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][720,1280]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.google.android.youtube" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,48][720,1280]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,48][720,1280]" displayed="true"&gt;
+          &lt;android.view.ViewGroup index="0" package="com.google.android.youtube" class="android.view.ViewGroup" text="" resource-id="com.google.android.youtube:id/toolbar" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,48][720,144]" displayed="true"&gt;
+            &lt;android.widget.ImageButton index="0" package="com.google.android.youtube" class="android.widget.ImageButton" text="" content-desc="Fechar" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,48][112,144]" displayed="true" /&gt;
+            &lt;android.widget.TextView index="1" package="com.google.android.youtube" class="android.widget.TextView" text="Conta" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,69][250,123]" displayed="true" /&gt;
+          &lt;/android.view.ViewGroup&gt;
+          &lt;android.support.v7.widget.RecyclerView index="1" package="com.google.android.youtube" class="android.support.v7.widget.RecyclerView" text="" resource-id="com.google.android.youtube:id/list" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" long-clickable="false" password="false" scrollable="true" selected="false" bounds="[0,144][720,1215]" displayed="true"&gt;
+            &lt;android.widget.LinearLayout index="0" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" resource-id="com.google.android.youtube:id/signed_in_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,144][720,512]" displayed="true"&gt;
+              &lt;android.widget.RelativeLayout index="0" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" resource-id="com.google.android.youtube:id/account_container" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,176][720,248]" displayed="true"&gt;
+                &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" content-desc="Seu canal" resource-id="com.google.android.youtube:id/account_thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[48,176][120,248]" displayed="true" /&gt;
+                &lt;android.widget.LinearLayout index="1" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" resource-id="com.google.android.youtube:id/account_name_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[152,190][640,233]" displayed="true"&gt;
+                  &lt;android.widget.Button index="0" package="com.google.android.youtube" class="android.widget.Button" text="Ana Torres" content-desc="Ana Torres. Alternar contas." resource-id="com.google.android.youtube:id/account_name" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[152,190][339,233]" displayed="true" /&gt;
+                &lt;/android.widget.LinearLayout&gt;
+                &lt;android.widget.ImageView index="2" package="com.google.android.youtube" class="android.widget.ImageView" text="" content-desc="Trocar de conta" resource-id="com.google.android.youtube:id/switch_account" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[640,188][688,236]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+              &lt;android.widget.Button index="1" package="com.google.android.youtube" class="android.widget.Button" text="Gerenciar sua Conta do Google" resource-id="com.google.android.youtube:id/manage_account" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[152,264][537,302]" displayed="true" /&gt;
+              &lt;android.widget.LinearLayout index="2" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" resource-id="com.google.android.youtube:id/compact_links" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,318][720,510]" displayed="true"&gt;
+                &lt;android.widget.LinearLayout index="0" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,318][720,414]" displayed="true"&gt;
+                  &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,326][112,406]" displayed="true" /&gt;
+                  &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,344][688,387]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Ativar modo de navegação anônima" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,344][655,387]" displayed="true" /&gt;
+                  &lt;/android.widget.RelativeLayout&gt;
+                &lt;/android.widget.LinearLayout&gt;
+                &lt;android.widget.LinearLayout index="1" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,414][720,510]" displayed="true"&gt;
+                  &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,422][112,502]" displayed="true" /&gt;
+                  &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,440][688,483]" displayed="true"&gt;
+                    &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Adicionar conta" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,440][368,483]" displayed="true" /&gt;
+                  &lt;/android.widget.RelativeLayout&gt;
+                &lt;/android.widget.LinearLayout&gt;
+              &lt;/android.widget.LinearLayout&gt;
+              &lt;android.view.View index="3" package="com.google.android.youtube" class="android.view.View" text="" resource-id="com.google.android.youtube:id/separator" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,510][720,512]" displayed="true" /&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.LinearLayout index="1" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,512][720,608]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,520][112,600]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,538][688,581]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Seu canal" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,538][283,581]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.LinearLayout index="2" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,608][720,704]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,616][112,696]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,634][640,677]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="YouTube Studio" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,634][368,677]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+              &lt;android.widget.ImageView index="2" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/secondary_icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[640,632][688,680]" displayed="true" /&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.LinearLayout index="3" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,704][720,800]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,712][112,792]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,730][688,773]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Tempo de exibição" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,730][412,773]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.LinearLayout index="4" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,800][720,896]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,808][112,888]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,826][688,869]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Assinar o YouTube Premium" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,826][550,869]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.LinearLayout index="5" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,896][720,992]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,904][112,984]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,922][688,965]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Compras e assinaturas" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,922][472,965]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.LinearLayout index="6" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,992][720,1088]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,1000][112,1080]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,1018][688,1061]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Seus dados no YouTube" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,1018][488,1061]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+            &lt;android.widget.FrameLayout index="7" package="com.google.android.youtube" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1088][720,1120]" displayed="true" /&gt;
+            &lt;android.widget.LinearLayout index="8" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1120][720,1215]" displayed="true"&gt;
+              &lt;android.widget.ImageView index="0" package="com.google.android.youtube" class="android.widget.ImageView" text="" resource-id="com.google.android.youtube:id/thumbnail" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[32,1128][112,1208]" displayed="true" /&gt;
+              &lt;android.widget.RelativeLayout index="1" package="com.google.android.youtube" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,1146][688,1189]" displayed="true"&gt;
+                &lt;android.widget.TextView index="0" package="com.google.android.youtube" class="android.widget.TextView" text="Configurações" resource-id="com.google.android.youtube:id/title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[144,1146][351,1189]" displayed="true" /&gt;
+              &lt;/android.widget.RelativeLayout&gt;
+            &lt;/android.widget.LinearLayout&gt;
+          &lt;/android.support.v7.widget.RecyclerView&gt;
+          &lt;android.widget.LinearLayout index="2" package="com.google.android.youtube" class="android.widget.LinearLayout" text="" resource-id="com.google.android.youtube:id/privacy_tos_footer" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1215][720,1280]" displayed="true"&gt;
+            &lt;android.widget.Button index="0" package="com.google.android.youtube" class="android.widget.Button" text="Política de Privacidade" resource-id="com.google.android.youtube:id/privacy_footer" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[119,1231][366,1264]" displayed="true" /&gt;
+            &lt;android.widget.TextView index="1" package="com.google.android.youtube" class="android.widget.TextView" text="  •  " resource-id="com.google.android.youtube:id/privacy_tos_dot" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[366,1231][398,1264]" displayed="true" /&gt;
+            &lt;android.widget.Button index="2" package="com.google.android.youtube" class="android.widget.Button" text="Termos de Serviço" resource-id="com.google.android.youtube:id/tos_footer" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[398,1231][600,1264]" displayed="true" /&gt;
+          &lt;/android.widget.LinearLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.FrameLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:45:55.595" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-4.png"&gt;&lt;img src="appium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:45:54.807" endtime="20210620 22:45:55.596"/>
+</kw>
+<msg timestamp="20210620 22:45:55.596" level="FAIL">Element 'id=identifierId' did not appear in 15 seconds</msg>
+<status status="FAIL" starttime="20210620 22:45:38.934" endtime="20210620 22:45:55.597"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=identifierId</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.597" endtime="20210620 22:45:55.597"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=identifierId</arg>
+<arg>${CONTA}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.597" endtime="20210620 22:45:55.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.597" endtime="20210620 22:45:55.597"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.597" endtime="20210620 22:45:55.597"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.Button</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.598" endtime="20210620 22:45:55.598"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>class=android.widget.Button</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.598" endtime="20210620 22:45:55.598"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.EditText</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.598" endtime="20210620 22:45:55.598"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>class=android.widget.EditText</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.598" endtime="20210620 22:45:55.598"/>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<arg>class=android.widget.EditTextlocator</arg>
+<arg>${SENHA_CONTA}</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.598" endtime="20210620 22:45:55.599"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.599" endtime="20210620 22:45:55.599"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.Button</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.599" endtime="20210620 22:45:55.599"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>class=android.widget.Button</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.599" endtime="20210620 22:45:55.599"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.Button</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.599" endtime="20210620 22:45:55.599"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>class=android.widget.Button</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.600" endtime="20210620 22:45:55.600"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" starttime="20210620 22:45:55.600" endtime="20210620 22:45:55.600"/>
+</kw>
+<status status="FAIL" starttime="20210620 22:45:33.579" endtime="20210620 22:45:55.600"/>
+</kw>
+<kw name="Verificar se a conta &quot;x&quot; foi logada" library="kws_mobileautomation" sourcename="Verificar se a conta ${CONTA} foi logada">
+<status status="NOT RUN" starttime="20210620 22:45:55.601" endtime="20210620 22:45:55.601"/>
+</kw>
+<kw name="Fechar o aplicativo" library="kws_mobileautomation" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:45:56.299" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-5.png"&gt;&lt;img src="appium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:45:55.602" endtime="20210620 22:45:56.300"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210620 22:45:56.300" endtime="20210620 22:45:56.934"/>
+</kw>
+<status status="PASS" starttime="20210620 22:45:55.602" endtime="20210620 22:45:56.934"/>
+</kw>
+<tag>LOGIN</tag>
+<status status="FAIL" starttime="20210620 22:44:33.636" endtime="20210620 22:45:56.935">Element 'id=identifierId' did not appear in 15 seconds</status>
+</test>
+<test id="s1-t3" name="Caso de Teste 03: Usar método Swipe na tela">
+<kw name="Abrir App" library="kws_mobileautomation" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=J5AXB603594995H</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210620 22:45:56.938" endtime="20210620 22:46:24.358"/>
+</kw>
+<status status="PASS" starttime="20210620 22:45:56.937" endtime="20210620 22:46:24.358"/>
+</kw>
+<kw name="Abrir App" library="kws_mobileautomation">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=J5AXB603594995H</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210620 22:46:24.359" endtime="20210620 22:46:55.094"/>
+</kw>
+<status status="PASS" starttime="20210620 22:46:24.359" endtime="20210620 22:46:55.094"/>
+</kw>
+<kw name="Entrar no menu Explorar" library="kws_mobileautomation">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@content-desc="Explorar"]/android.widget.TextView</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20210620 22:46:55.095" endtime="20210620 22:46:56.991"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@content-desc="Explorar"]/android.widget.TextView</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210620 22:46:56.993" level="INFO">Clicking element 'xpath=//android.widget.Button[@content-desc="Explorar"]/android.widget.TextView'.</msg>
+<status status="PASS" starttime="20210620 22:46:56.991" endtime="20210620 22:47:01.583"/>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:47:02.456" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-6.png"&gt;&lt;img src="appium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:47:01.583" endtime="20210620 22:47:02.457"/>
+</kw>
+<status status="PASS" starttime="20210620 22:46:55.095" endtime="20210620 22:47:02.457"/>
+</kw>
+<kw name="Usar swipe de tela até o 10 item da tela" library="kws_mobileautomation">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.view.ViewGroup[2]/android.view.ViewGroup</arg>
+<arg>15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20210620 22:47:02.458" endtime="20210620 22:47:03.714"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${POSICAO}</var>
+<value>0</value>
+<value>10</value>
+<iter>
+<var name="${POSICAO}">0</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:03.716" endtime="20210620 22:47:05.535"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:05.535" level="INFO">${POSICAO} = 0+1</msg>
+<status status="PASS" starttime="20210620 22:47:05.535" endtime="20210620 22:47:05.535"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:03.715" endtime="20210620 22:47:05.536"/>
+</iter>
+<iter>
+<var name="${POSICAO}">1</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:05.536" endtime="20210620 22:47:07.079"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:07.079" level="INFO">${POSICAO} = 1+1</msg>
+<status status="PASS" starttime="20210620 22:47:07.079" endtime="20210620 22:47:07.079"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:05.536" endtime="20210620 22:47:07.079"/>
+</iter>
+<iter>
+<var name="${POSICAO}">2</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:07.079" endtime="20210620 22:47:08.476"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:08.478" level="INFO">${POSICAO} = 2+1</msg>
+<status status="PASS" starttime="20210620 22:47:08.477" endtime="20210620 22:47:08.478"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:07.079" endtime="20210620 22:47:08.478"/>
+</iter>
+<iter>
+<var name="${POSICAO}">3</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:08.478" endtime="20210620 22:47:09.839"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:09.840" level="INFO">${POSICAO} = 3+1</msg>
+<status status="PASS" starttime="20210620 22:47:09.839" endtime="20210620 22:47:09.841"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:08.478" endtime="20210620 22:47:09.841"/>
+</iter>
+<iter>
+<var name="${POSICAO}">4</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:09.841" endtime="20210620 22:47:11.211"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:11.213" level="INFO">${POSICAO} = 4+1</msg>
+<status status="PASS" starttime="20210620 22:47:11.212" endtime="20210620 22:47:11.213"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:09.841" endtime="20210620 22:47:11.214"/>
+</iter>
+<iter>
+<var name="${POSICAO}">5</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:11.215" endtime="20210620 22:47:12.560"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:12.560" level="INFO">${POSICAO} = 5+1</msg>
+<status status="PASS" starttime="20210620 22:47:12.560" endtime="20210620 22:47:12.560"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:11.214" endtime="20210620 22:47:12.560"/>
+</iter>
+<iter>
+<var name="${POSICAO}">6</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:12.560" endtime="20210620 22:47:13.934"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:13.936" level="INFO">${POSICAO} = 6+1</msg>
+<status status="PASS" starttime="20210620 22:47:13.935" endtime="20210620 22:47:13.936"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:12.560" endtime="20210620 22:47:13.936"/>
+</iter>
+<iter>
+<var name="${POSICAO}">7</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:13.937" endtime="20210620 22:47:15.283"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:15.283" level="INFO">${POSICAO} = 7+1</msg>
+<status status="PASS" starttime="20210620 22:47:15.283" endtime="20210620 22:47:15.283"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:13.937" endtime="20210620 22:47:15.283"/>
+</iter>
+<iter>
+<var name="${POSICAO}">8</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:15.284" endtime="20210620 22:47:16.654"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:16.655" level="INFO">${POSICAO} = 8+1</msg>
+<status status="PASS" starttime="20210620 22:47:16.654" endtime="20210620 22:47:16.655"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:15.284" endtime="20210620 22:47:16.655"/>
+</iter>
+<iter>
+<var name="${POSICAO}">9</var>
+<kw name="Swipe" library="AppiumLibrary">
+<arg>350</arg>
+<arg>1000</arg>
+<arg>350</arg>
+<arg>200</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20210620 22:47:16.655" endtime="20210620 22:47:18.041"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${POSICAO}</var>
+<arg>${POSICAO}+1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210620 22:47:18.043" level="INFO">${POSICAO} = 9+1</msg>
+<status status="PASS" starttime="20210620 22:47:18.042" endtime="20210620 22:47:18.043"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:16.655" endtime="20210620 22:47:18.043"/>
+</iter>
+<status status="PASS" starttime="20210620 22:47:03.714" endtime="20210620 22:47:18.043"/>
+</for>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:47:19.683" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-7.png"&gt;&lt;img src="appium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:47:18.044" endtime="20210620 22:47:19.683"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:02.458" endtime="20210620 22:47:19.683"/>
+</kw>
+<kw name="Fechar o aplicativo" library="kws_mobileautomation" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210620 22:47:21.286" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-8.png"&gt;&lt;img src="appium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210620 22:47:19.684" endtime="20210620 22:47:21.286"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210620 22:47:21.286" endtime="20210620 22:47:21.922"/>
+</kw>
+<status status="PASS" starttime="20210620 22:47:19.684" endtime="20210620 22:47:21.923"/>
+</kw>
+<tag>SW</tag>
+<status status="PASS" starttime="20210620 22:45:56.936" endtime="20210620 22:47:21.923"/>
+</test>
+<doc>Aqui estarão todos os testes de mobile do curso</doc>
+<status status="FAIL" starttime="20210620 22:43:12.651" endtime="20210620 22:47:21.925"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">LOGIN</stat>
+<stat pass="1" fail="0" skip="0">PESQUISAR</stat>
+<stat pass="1" fail="0" skip="0">SW</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Mobileautomation">Mobileautomation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
