@@ -1,6 +1,4 @@
 # Prime Expert
-
-# Teste automatizado para verificação de intenção de compra
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/analuciatorres/prime_expert/blob/master/LICENSE) 
 
 # Sobre o projeto
